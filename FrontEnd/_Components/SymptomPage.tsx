@@ -491,7 +491,8 @@ const SymptomPage: NextPage = () => {
       const payload = {
         Symptoms: formatSymptomsForApi(selectedSymptoms),
       };
-      const response = await fetch(`${backend_url}/api/predict/predict`, {
+      //`${backend_url}/api/predict/predict`
+      const response = await fetch("/api/symptoms/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -5,12 +5,10 @@ const nextConfig: NextConfig = {
     return [
       // Medicine backend
       {
-        
-      source: "/api/medicine/:path*",
-      destination: "https://dsh-1.onrender.com/analyze/:path*",
-
+        source: "/api/medicine/:path*",
+        destination: "https://dsh-1.onrender.com/:path*",  // ✅ remove extra /analyze
       },
-      // Symptoms backend (maps to /api/predict/:path* on Render)
+      // Symptoms backend
       {
         source: "/api/symptoms/:path*",
         destination: "https://dsh-2.onrender.com/api/predict/:path*",
