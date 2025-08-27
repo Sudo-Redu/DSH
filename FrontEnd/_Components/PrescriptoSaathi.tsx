@@ -38,10 +38,13 @@ export default function PrescriptionMedicineFinder() {
       const formData = new FormData();
       formData.append("file", uploadedImage);
 
-      const response = await fetch("http://localhost:8000/api/extract_medicines", {
-        method: "POST",
-        body: formData,
-      });
+
+const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/extract_medicines`, {
+  method: "POST",
+  body: formData,
+});
+
+
 
       const data = await response.json();
       if (!response.ok) {
