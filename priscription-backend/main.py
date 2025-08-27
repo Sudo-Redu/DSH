@@ -52,6 +52,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# health check endpoint
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
 # --------------------
 # Helper functions
 # --------------------
