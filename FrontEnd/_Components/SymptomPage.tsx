@@ -548,6 +548,22 @@ const SymptomPage: NextPage = () => {
   const diseaseResult = Array.isArray(predictionResult)
     ? predictionResult[0]
     : predictionResult;
+
+
+    //add late
+  type SymptomsDisplayProps = {
+  disease: {
+    MatchedSymptoms: string[];
+    UnmatchedSymptoms: string[];
+    AllSymptoms: string[];
+    Medicines: string[];
+    "Brand Names": string[];
+    Dosages: string[];
+    "Prices (INR)": number[];
+  };
+};
+
+
   const SymptomsDisplay: React.FC<SymptomsDisplayProps> = ({ disease }) => (
     <div>
       <p className="text-base text-gray-700 mb-2 font-medium">
@@ -1168,7 +1184,7 @@ const SymptomPage: NextPage = () => {
                                   </tr>
                                 </thead>
                                 <tbody className="bg-white divide-y divide-gray-100">
-                                  {disease.Medicines.map((med, i) => (
+                                  {disease.Medicines.map((med: string, i: number) => (
                                     <tr key={i}>
                                       <td className="px-4 py-3 font-medium text-gray-900">
                                         {med}
