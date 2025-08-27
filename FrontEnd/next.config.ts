@@ -5,8 +5,10 @@ const nextConfig: NextConfig = {
     return [
       // Medicine backend
       {
-        source: "/api/medicine/:path*",
-        destination: "https://dsh-1.onrender.com/analyze:path*",  // ✅ remove extra /analyze
+        // source: "/api/medicine/:path*",
+        // destination: "https://dsh-1.onrender.com/analyze:path*",  // ✅ remove extra /analyze
+      source: "/api/medicine/:path*",
+  destination: "https://dsh-1.onrender.com/:path*",
       },
       // Symptoms backend
       {
