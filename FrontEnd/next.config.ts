@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
       // Medicine backend
       {
         source: "/api/medicine/:path*",
-        destination: "https://dsh-1.onrender.com/analyze/:path*",  // ✅ remove extra /analyze
+        destination: "https://dsh-1.onrender.com/analyze:path*",  // ✅ remove extra /analyze
       },
       // Symptoms backend
       {
