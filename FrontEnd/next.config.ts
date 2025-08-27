@@ -17,8 +17,10 @@ const nextConfig: NextConfig = {
       },
       // Prescription backend
       {
+        // source: "/api/prescription/:path*",
+        // destination: "https://dsh-t97y.onrender.com/api/:path*",
         source: "/api/prescription/:path*",
-        destination: "https://dsh-t97y.onrender.com/api/:path*",
+        destination: "https://dsh-t97y.onrender.com/:path*",
       },
     ];
   },
