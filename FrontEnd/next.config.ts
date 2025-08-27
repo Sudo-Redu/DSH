@@ -19,8 +19,9 @@ const nextConfig: NextConfig = {
       {
         // source: "/api/prescription/:path*",
         // destination: "https://dsh-t97y.onrender.com/api/:path*",
+        
         source: "/api/prescription/:path*",
-        destination: "https://dsh-t97y.onrender.com/:path*",
+        destination: "https://dsh-t97y.onrender.com/api/:path*",
       },
     ];
   },
